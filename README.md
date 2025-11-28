@@ -253,6 +253,7 @@ Academic Year: 2025-2026
 
 Acknowledgements
 This project, Ready Set Recover: A Comprehensive Disaster Preparedness and Response Management System, would not have been possible without the support and contributions of the following individuals and organizations:
+
 Academic Guidance
 Mr. Juriel Comia- For guidance in Object-Oriented Programming and project development
 Java Programming Course - For teaching fundamental and advanced Java concepts including:
@@ -262,17 +263,4 @@ Polymorphism and method overriding
 Abstraction through abstract classes
 Exception handling and custom exceptions
 Java Collections Framework (Map, List, ArrayList, LinkedHashMap, TreeMap)
-
-
-
-
-
-
-
-
-
-
-Other Sections you may include:
-a. Future Enhancements
-b. References
 
