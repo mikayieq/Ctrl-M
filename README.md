@@ -48,15 +48,8 @@ Implementation in Our Project:
 
 A. Method Overriding (Runtime Polymorphism)
 In DuringDisaster.java:
+
 <img width="410" height="603" alt="Screenshot 2025-11-28 155129" src="https://github.com/user-attachments/assets/94a67b5c-db36-4618-b39e-111632c7fb2e" />
-
-
-
-
-
-
-
-
 
 Usage in disasterMenu() method:
 
