@@ -6,8 +6,10 @@ As the world faces increasing threats from climate change and natural disasters,
 
 OOP Concepts Applied in Ready Set Recover
 
-1. Encapsulation 
+1. Encapsulation
+   
 Definition: Encapsulation is the bundling of data (attributes) and methods that operate on that data within a single unit (class), while restricting direct access to some components.
+
 Implementation in Our Project:
 
 A. Hospital Class (DuringDisaster.java)
@@ -26,24 +28,30 @@ Inner class: Survivor is an inner class, further encapsulating it within AfterDi
 Controlled display: Data can only be displayed through the display() method
 
 2. Inheritance
+   
 Definition: Inheritance allows a class to inherit properties and methods from another class, promoting code reuse and establishing an "is-a" relationship.
+
 Implementation in Our Project:
 
 A. DisasterManager Hierarchy (DuringDisaster.java)
+
 Benefits:
-All disaster managers share common CRUD operations (Insert, Search, Display, Delete)
-Each disaster type has unique safety suggestions
-Code reusability: Common functionality defined once in parent class
-Easy to add new disaster types by extending DisasterManager
+- All disaster managers share common CRUD operations (Insert, Search, Display, Delete)
+- Each disaster type has unique safety suggestions
+- Code reusability: Common functionality defined once in parent class
+- Easy to add new disaster types by extending DisasterManager
 
 B. DisasterGuide Hierarchy (AfterDisaster.java)
-Benefits:
-Each guide type inherits from DisasterGuide
-Forces all guides to implement displayGuide() method
-Consistent interface for all disaster recovery guides
 
-4.  Polymorphism
+Benefits:
+- Each guide type inherits from DisasterGuide
+- Forces all guides to implement displayGuide() method
+- Consistent interface for all disaster recovery guides
+
+3.  Polymorphism
+   
 Definition: Polymorphism allows objects of different classes to be treated as objects of a common parent class, enabling one interface to be used for different data types.
+
 Implementation in Our Project:
 
 A. Method Overriding (Runtime Polymorphism)
@@ -65,36 +73,43 @@ In Hospital class:
 <img width="616" height="337" alt="Screenshot 2025-11-28 140049" src="https://github.com/user-attachments/assets/90bd4de0-1a13-4374-a757-d9d6d0e0ed08" />
 
 Benefits of Polymorphism:
-Flexibility: One method name, multiple behaviors
-Maintainability: Easy to add new disaster types without changing existing code
-Code reusability: Common interface for different implementations
+- Flexibility: One method name, multiple behaviors
+- Maintainability: Easy to add new disaster types without changing existing code
+- Code reusability: Common interface for different implementations
 
 4. Abstraction
+   
 Definition: Abstraction is the process of hiding complex implementation details and showing only essential features of an object.
+
 Implementation in Our Project:
 
 A. Abstract DisasterManager Class (DuringDisaster.java)
+
 Why this is abstraction:
-Cannot create an instance of DisasterManager directly
-Provides a blueprint for all disaster-specific managers
-Hides the common implementation while exposing the interface
-Forces child classes to implement disaster-specific behavior
+- Cannot create an instance of DisasterManager directly
+- Provides a blueprint for all disaster-specific managers
+- Hides the common implementation while exposing the interface
+- Forces child classes to implement disaster-specific behavior
 
 B. Abstract DisasterGuide Class (AfterDisaster.java)
+
 Benefits:
-Defines a contract that all guides must follow
-Ensures consistency across different disaster recovery guides
-Hides implementation details from the user
+- Defines a contract that all guides must follow
+- Ensures consistency across different disaster recovery guides
+- Hides implementation details from the user
 
 C. Interface-like Abstraction (BeforeDisaster.java)
 
 <img width="604" height="264" alt="Screenshot 2025-11-28 140607" src="https://github.com/user-attachments/assets/95ef9bc5-2e69-4359-a25b-beed0664139d" />
 
 5. Exception Handling
+   
 Definition: Exception handling is a mechanism to handle runtime errors, maintaining normal application flow even when errors occur.
+
 Implementation in Our Project:
 
 A. Custom Exceptions (DuringDisaster.java)
+
 1. ReportNotFoundException:
    
 <img width="633" height="652" alt="Screenshot 2025-11-28 140730" src="https://github.com/user-attachments/assets/11afce02-f985-43da-9a6a-e698317acbea" />
@@ -116,29 +131,34 @@ InputMismatchException (AfterDisaster.java):
 Multiple Exception Handling (DuringDisaster.java):
 
 Benefits of Exception Handling:
-Robustness: Application doesn't crash on errors
-User-friendly: Clear error messages for users
-Debugging: Easier to identify and fix issues
-Flow control: Separates error-handling code from normal code
+- Robustness: Application doesn't crash on errors
+- User-friendly: Clear error messages for users
+- Debugging: Easier to identify and fix issues
+- Flow control: Separates error-handling code from normal code
 
 6. Collections in Java
+   
 Definition: Collections are frameworks that provide architecture to store and manipulate groups of objects.
+
 Implementation in Our Project:
 
 A. Map Collection (DuringDisaster.java)
+
 1. LinkedHashMap for Reports:
 Why LinkedHashMap?
-Maintains insertion order (important for display)
-Fast lookup by Report ID (O(1) complexity)
-Easy to iterate through reports
+- Maintains insertion order (important for display)
+- Fast lookup by Report ID (O(1) complexity)
+- Easy to iterate through reports
 
 2. TreeMap for Hospital Directory:
+   
 Why TreeMap?
-Automatically sorts cities alphabetically
-Case-insensitive comparison
-Efficient searching and retrieval
+- Automatically sorts cities alphabetically
+- Case-insensitive comparison
+- Efficient searching and retrieval
 
 B. List Collection
+
 1. ArrayList for Hospital Lists:
 
 <img width="606" height="455" alt="Screenshot 2025-11-28 141957" src="https://github.com/user-attachments/assets/b2dba305-452e-4455-9f53-dd17ca1b46fe" />
@@ -153,65 +173,80 @@ B. List Collection
 <img width="568" height="512" alt="Screenshot 2025-11-28 142138" src="https://github.com/user-attachments/assets/8a8524dd-222f-4082-8213-e404fe7ead92" />
 
 C. Array Collection (DisasterResponseSystem.java)
+
 Fixed-size Array for Survivors:
 
 <img width="491" height="694" alt="Screenshot 2025-11-28 142341" src="https://github.com/user-attachments/assets/1ce93c96-767d-4707-b849-617aa81198e8" />
 
 D. Advanced Collection Usage
+
 1. AtomicInteger for Thread-safe Counter:
 
 <img width="465" height="140" alt="Screenshot 2025-11-28 161043" src="https://github.com/user-attachments/assets/0a685aa4-1879-4297-8a3c-8e4894aa86aa" />
 
 2. computeIfAbsent for Lazy Initialization:
 Benefits of Collections:
-Dynamic sizing: Lists grow as needed
-Type safety: Generic types prevent runtime errors
-Built-in methods: Sort, search, filter operations
-Performance: Optimized for different use cases
-Flexibility: Easy to switch between collection types
+- Dynamic sizing: Lists grow as needed
+- Type safety: Generic types prevent runtime errors
+- Built-in methods: Sort, search, filter operations
+- Performance: Optimized for different use cases
+- Flexibility: Easy to switch between collection types
 
 Program Structure Applied in Ready Set Recover
+
 ReadySetRecover (Main Entry Point)
+
 File: ReadySetRecover.java
+
 Role: Central controller and application entry point that coordinates the entire disaster management system.
-Responsibilities: Display welcome screen and system information
-Manage main menu navigation between disaster phases
-Route users to appropriate modules (Before/During/After)
-Handle application lifecycle (start/exit)
-Coordinate between different disaster management modules
+
+Responsibilities: 
+- Display welcome screen and system information
+- Manage main menu navigation between disaster phases
+- Route users to appropriate modules (Before/During/After)
+- Handle application lifecycle (start/exit)
+- Coordinate between different disaster management modules
 
 How to Run the Ready Set Recover
+
 Main Menu:
-Press 1 for BEFORE (Preparation)
-Press 2 for DURING (Emergency Response)
-Press 3 for AFTER (Recovery)
-Press 0 to Exit
+- Press 1 for BEFORE (Preparation)
+- Press 2 for DURING (Emergency Response)
+- Press 3 for AFTER (Recovery)
+- Press 0 to Exit
+  
 Using BeforeDisaster
-Select disaster type (Earthquake, Typhoon, Flood, and Fire)
-View preparation guide
-Press Enter to continue
-Press to return to main menu
+1. Select disaster type (Earthquake, Typhoon, Flood, and Fire)
+2. View preparation guide
+3. Press Enter to continue
+4. Press to return to main menu
+   
 Using DuringDisaster
-Select disaster type (earthquake, typhoon, flood, or fire).
-Choose operation:
+
+1. Select disaster type (earthquake, typhoon, flood, or fire).
+2. Choose operation:
 1 - Insert new report
 2 - Search report
 3 - Display all reports
 4 - Delete report
 5 - Get safety suggestions
 0 - Back to main menu
-Follow prompts to enter information
-Type Y to continue or N to go back
+3. Follow prompts to enter information
+4. Type Y to continue or N to go back
+   
 Using AfterDisaster
-Choose option:
-1 - View recovery guides
-2 - Add survivor
-3 - Delete survivor
-4 - Search survivor
-5 - Sort survivors
-6 - Display all survivors
-0 - Return to main menu
-Follow prompts to enter information
+
+1. Choose option:
+  1 - View recovery guides
+  2 - Add survivor
+  3 - Delete survivor
+  4 - Search survivor
+  5 - Sort survivors
+  6 - Display all survivors
+  0 - Return to main menu
+   
+2. Follow prompts to enter information
+   
 Exit the Program
 Press 0 from the main menu
 
@@ -258,10 +293,10 @@ This project, Ready Set Recover: A Comprehensive Disaster Preparedness and Respo
 Academic Guidance
 Mr. Juriel Comia- For guidance in Object-Oriented Programming and project development
 Java Programming Course - For teaching fundamental and advanced Java concepts including:
-Encapsulation and data hiding principles
-Inheritance and class hierarchies
-Polymorphism and method overriding
-Abstraction through abstract classes
-Exception handling and custom exceptions
-Java Collections Framework (Map, List, ArrayList, LinkedHashMap, TreeMap)
+- Encapsulation and data hiding principles
+- Inheritance and class hierarchies
+- Polymorphism and method overriding
+- Abstraction through abstract classes
+- Exception handling and custom exceptions
+- Java Collections Framework (Map, List, ArrayList, LinkedHashMap, TreeMap)
 
