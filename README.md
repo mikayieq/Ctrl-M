@@ -52,6 +52,8 @@ In DuringDisaster.java:
 
 
 
+
+
 Usage in disasterMenu() method:
 
 <img width="578" height="328" alt="Screenshot 2025-11-28 135719" src="https://github.com/user-attachments/assets/cd22cbed-49ef-4c98-ab78-db783bd9c404" />
